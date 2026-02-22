@@ -11,7 +11,7 @@ This repo has/will contain the following:
   - [ ]  kuskokwim - A tiling window manager with composable keybindings and first-class support for process management, written in Python
   - [x]  kwm - DWM-like dynamic tilling window manager with scrollable-tiling support, includes a simple status bar, written in Zig
   - [x]  machi - Minimalist window manager with cascading windows, horizontal panels and vertical workspaces
-  - [ ]  mousetrap - Minimal stumpwm/ratpoison-like window manager, using modern c++
+  - [x]  mousetrap - Minimal stumpwm/ratpoison-like window manager, using modern c++
   - [ ]  pwm - Tiling window manager with SSD titlebars and Python API
   - [ ]  rhine - Tiling window manager with a bsp layout, some Hyprland IPC for bars and ambitions of modularity
   - [ ]  rijan - Small dynamic tiling window manager in 600 lines of Janet
