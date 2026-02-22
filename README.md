@@ -15,7 +15,7 @@ This repo has/will contain the following:
   - [ ]  pwm - Tiling window manager with SSD titlebars and Python API
   - [ ]  rhine - Tiling window manager with a bsp layout, some Hyprland IPC for bars and ambitions of modularity
   - [ ]  rijan - Small dynamic tiling window manager in 600 lines of Janet
-  - [ ]  rill - A minimalist scrolling window manager with simple animation, written in Zig
+  - [x]  rill - A minimalist scrolling window manager with simple animation, written in Zig
   - [ ]  rrwm - Tiling window manager with a cosmic/bspwm layout, written in Rust
   - [ ]  tarazed - Non-tiling window manager focusing on a powerful and distraction-free desktop experience
   - [ ]  zrwm - Dynamic tiling window manager configured using a CLI tool
@@ -28,3 +28,4 @@ This repo has/will contain the following:
 
 ## Notes
 Please note that all the packages here are pulling changes against their respective main branches. For window managers in particular, some are further along in development than others. Therefore, the risk of experiencing a breaking change may vary, **but it is always non-zero**!
+
