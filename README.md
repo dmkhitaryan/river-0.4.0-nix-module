@@ -17,7 +17,7 @@ This repo has/will contain the following:
   - [x]  rijan - Small dynamic tiling window manager in 600 lines of Janet
   - [x]  rill - A minimalist scrolling window manager with simple animation, written in Zig
   - [x]  rrwm - Tiling window manager with a cosmic/bspwm layout, written in Rust
-  - [ ]  tarazed - Non-tiling window manager focusing on a powerful and distraction-free desktop experience
+  - [x]  tarazed - Non-tiling window manager focusing on a powerful and distraction-free desktop experience
   - [ ]  zrwm - Dynamic tiling window manager configured using a CLI tool
  - [ ] River 0.4.0 module
 
