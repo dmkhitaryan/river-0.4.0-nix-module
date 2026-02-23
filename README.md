@@ -13,7 +13,7 @@ This repo has/will contain the following:
   - [x]  machi - Minimalist window manager with cascading windows, horizontal panels and vertical workspaces
   - [x]  mousetrap - Minimal stumpwm/ratpoison-like window manager, using modern c++
   - [ ]  pwm - Tiling window manager with SSD titlebars and Python API
-  - [ ]  rhine - Tiling window manager with a bsp layout, some Hyprland IPC for bars and ambitions of modularity
+  - [x]  rhine - Tiling window manager with a bsp layout, some Hyprland IPC for bars and ambitions of modularity
   - [ ]  rijan - Small dynamic tiling window manager in 600 lines of Janet
   - [x]  rill - A minimalist scrolling window manager with simple animation, written in Zig
   - [ ]  rrwm - Tiling window manager with a cosmic/bspwm layout, written in Rust
