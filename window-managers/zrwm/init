@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+modkey="super"
+zrwm-msg bind $modkey Return spawn foot
+
+TAGKEYS() {
+    zrwm-msg bind $modkey $(($1 + 1)) view $((1 << $1))
+    zrwm-msg bind $modkey,ctrl $(($1 + 1)) toggleview $((1 << $1))
+    zrwm-msg bind $modkey,shift $(($1 + 1)) tag $((1 << $1))
+    zrwm-msg bind $modkey,shift,ctrl $(($1 + 1)) toggletag $((1 << $1))
+}
+zrwm-msg clear-rules
+zrwm-msg clear-binds
+zrwm-msg bind $modkey Return spawn foot
+zrwm-msg bind $modkey d spawn fuzzel
+zrwm-msg bind $modkey q killwindow
+zrwm-msg bind $modkey j focusstack 1
+zrwm-msg bind $modkey k focusstack -1
+zrwm-msg bind $modkey,shift j pushup
+zrwm-msg bind $modkey,shift k pushdown
+zrwm-msg bind $modkey w togglesplit
+zrwm-msg bind $modkey f togglefullscreen
+zrwm-msg bind $modkey s togglefloating
+zrwm-msg bind $modkey h setmfact -0.05
+zrwm-msg bind $modkey l setmfact 0.05
+zrwm-msg bind $modkey r reload
+
+zrwm-msg bind $modkey,shift w setlayout split_tile
+zrwm-msg bind $modkey,shift s setlayout float
+zrwm-msg bind $modkey,shift d setlayout deck
+zrwm-msg bind $modkey,shift u setlayout deck
+zrwm-msg bind $modkey z togglesticky
+
+zrwm-msg bind none XF86AudioRaiseVolume spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 2.5%+
+zrwm-msg bind none XF86AudioLowerVolume spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 2.5%-
+zrwm-msg bind none XF86AudioMute spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+zrwm-msg bind none XF86AudioMedia spawn playerctl play-pause
+zrwm-msg bind none XF86AudioPlay spawn playerctl play
+zrwm-msg bind none XF86AudioPause spawn playerctl pause
+zrwm-msg bind none XF86AudioPrev spawn playerctl previous
+zrwm-msg bind none XF86AudioNext spawn playerctl next
+TAGKEYS 0
+TAGKEYS 1
+TAGKEYS 2
+TAGKEYS 3
+TAGKEYS 4
+TAGKEYS 5
+TAGKEYS 6
+TAGKEYS 7
+TAGKEYS 8
+zrwm-msg bind-mouse $modkey left moveresize 1
+zrwm-msg bind-mouse $modkey middle togglefloating 0
+zrwm-msg bind-mouse $modkey right moveresize 2
+
+zrwm-msg rule-add -appid steam -float -inverse_title Steam
+zrwm-msg rule-add -appid xdg-desktop-portal-gtk -float
+zrwm-msg rule-add -appid "steam_app_" -float
+zrwm-msg rule-add -appid zen-browser -title "Picture-in-Picture" -float
+zrwm-msg borderpx 4
+zrwm-msg bordercolor 27233fff
+zrwm-msg focuscolor 742ffcff
+zrwm-msg setcursor Adwaita 24
+zrwm-msg setlayout 0
