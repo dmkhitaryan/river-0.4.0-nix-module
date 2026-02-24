@@ -1,4 +1,4 @@
-# [WIP] NixOS module for River 0.4.0 release
+# [WIP] NixOS module for River 0.4.0 onwards
 Since River has been renamed to `river-classic` in Nixpkgs, and the new version is currently not in release state, I wanted to build it locally to try out the changes. Given how it works, there is also a bunch of window managers that are implemented separately from River itself. 
 Of course, the only way to choose a favourite is to try them all! That's why I figured I might as well build all of those, and maybe make a module down the line. If I don't run out of steam sooner, that is.
 
@@ -28,3 +28,4 @@ This repo has/will contain the following:
 
 ## Notes
 Please note that all the packages here are pulling changes against their respective main branches. For window managers in particular, some are further along in development than others. Therefore, the risk of experiencing a breaking change may vary, **but it is always non-zero**!
+
