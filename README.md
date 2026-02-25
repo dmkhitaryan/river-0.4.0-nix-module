@@ -19,13 +19,15 @@ This repo has/will contain the following:
   - [x]  rrwm - Tiling window manager with a cosmic/bspwm layout, written in Rust
   - [x]  tarazed - Non-tiling window manager focusing on a powerful and distraction-free desktop experience
   - [x]  zrwm - Dynamic tiling window manager configured using a CLI tool
- - [ ] River 0.4.0 module
+ - [x] River 0.4.0 module: `programs.river-next`
+  - [x] `xwayland.enable`, `manpages.enable`: options to enable/disable `xwayland` and `man` pages for River. Those are enabled by default.
+  - [x] `windowManagers`: option to select window manager(s) to install, along with creating respective desktop sessions for display managers to invoke. Empty by default.
+  - [x] `extraPackages`: option to include extra packages. By default includes `foot` and `fuzzel` as those are most commonly by the window managers here by default.
 
 ## Goals
-1. Finish writing derivations for the window managers listed above.
-2. Write a module for River, along with options for enabling supported window managers.
+1. ~~Finish writing derivations for the window managers listed above.~~
+2. ~~Write a module for River, along with options for enabling supported window managers.~~ 
 3. Version control beyond manually running update scripts.
 
 ## Notes
 Please note that all the packages here are pulling changes against their respective main branches. For window managers in particular, some are further along in development than others. Therefore, the risk of experiencing a breaking change may vary, **but it is always non-zero**!
-
