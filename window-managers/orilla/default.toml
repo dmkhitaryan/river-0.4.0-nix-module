@@ -1,0 +1,54 @@
+layouts = ["Tall", "Full"]
+gaps = 10
+
+[[keybindings]]
+key = "c"
+modifiers = ["Super", "Shift"]
+action = "close"
+
+[[keybindings]]
+key = "space"
+modifiers = ["Super"]
+action = "cycle_layout"
+
+[[keybindings]]
+key = "n"
+modifiers = ["Super"]
+action = "focus_next"
+
+[[keybindings]]
+key = "e"
+modifiers = ["Super"]
+action = "focus_prev"
+
+[[keybindings]]
+key = "t"
+modifiers = ["Super"]
+action = "spawn"
+command = ["fuzzel"]
+
+[[keybindings]]
+key = "Return"
+modifiers = ["Super"]
+action = "spawn"
+command = ["foot"]
+
+[[keybindings]]
+key = "l"
+modifiers = ["Super"]
+action = "grow_main"
+
+[[keybindings]]
+key = "h"
+modifiers = ["Super"]
+action = "shrink_main"
+
+[[keybindings]]
+key = "i"
+modifiers = ["Super"]
+action = "inc_main_count"
+
+[[keybindings]]
+key = "d"
+modifiers = ["Super"]
+action = "dec_main_count"

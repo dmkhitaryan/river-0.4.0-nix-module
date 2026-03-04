@@ -38,19 +38,19 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "wayland-0.5.0-dev-lQa1kv_ZAQCZfnVZMocokZ78QJbH6NaM5RUC9ODQPhx5";
-    path = fetchgit {
-      url = "https://codeberg.org/ifreund/zig-wayland";
-      rev = "e57368ecbda85d564362779b253b744260a4b053";
-      hash = "sha256-DwBIY4v6jZ7YhCRFvYujRmpIVtO9hSSpIbESpl6hbIU=";
-    };
-  }
-  {
     name = "wayland-0.5.0-dev-lQa1kvTUAQCsD8AobfOXJA_-TVG-WTYXju68OZ8L85RM";
     path = fetchgit {
       url = "https://codeberg.org/ifreund/zig-wayland";
       rev = "f2480d25764a50ed2fe29f49e4209c074a557f46";
       hash = "sha256-PosVlJ0FD80O46l0SYTWzfHFYfIE4Bdjqof/gttQ+KM=";
+    };
+  }
+  {
+    name = "wayland-0.5.0-dev-lQa1kv_ZAQCZfnVZMocokZ78QJbH6NaM5RUC9ODQPhx5";
+    path = fetchgit {
+      url = "https://codeberg.org/ifreund/zig-wayland.git";
+      rev = "e57368ecbda85d564362779b253b744260a4b053";
+      hash = "sha256-DwBIY4v6jZ7YhCRFvYujRmpIVtO9hSSpIbESpl6hbIU=";
     };
   }
   {

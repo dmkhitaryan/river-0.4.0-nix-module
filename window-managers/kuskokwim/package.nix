@@ -16,8 +16,8 @@ python3Packages.buildPythonPackage (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "ricci";
     repo = "kuskokwim";
-    rev = "1980d673fcde3ccab42f6d7d3a1e7efda416354e";
-    hash = "sha256-XVdMIOofuryGRMyKUlQ5ty39CcqPRTWmmWPpVyOnDFw=";
+    rev = "d912850aa466d9f05d2806002aaff65ecf4431f0";
+    hash = "sha256-o8rUs4PldLcOmi1lKQQbi3II5dk+o7gN1XVBkZn5ySY=";
   };
 
   build-system = [

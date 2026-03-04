@@ -9,6 +9,7 @@
     kwm         = ./window-managers/kwm/package.nix;
     machi       = ./window-managers/machi/package.nix;
     mousetrap   = ./window-managers/mousetrap/package.nix;
+    orilla      = ./window-managers/orilla/package.nix;
     pwm         = ./window-managers/pwm/package.nix;
     rhine       = ./window-managers/rhine/package.nix;
     rijan       = ./window-managers/rijan/package.nix;

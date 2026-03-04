@@ -16,7 +16,7 @@ lemongrass=$(fetch https://github.com/pyrmont/lemongrass 906974b82ba06ed421e0c8c
 river=$(fetch https://codeberg.org/river/river 0ad1a8fa0bdabc9c73013d0102f3136e346355c5)
 wayland_protocols=$(fetch https://gitlab.freedesktop.org/wayland/wayland-protocols 88223018d1b578d0d8869866da66d9608e05f928)
 
-cat > build.zig.zon.nix << EOF
+cat > "$SCRIPT_DIR/build.zig.zon.nix" << EOF
 { linkFarm, fetchgit }:
 linkFarm "zig-packages" [
   { name = "janet-1.40.1-3XUN8cVGAAA7Os-UamOhi0sYVRqN-slGltgD5Jwwwfdk";

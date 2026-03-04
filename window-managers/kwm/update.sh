@@ -5,8 +5,8 @@ SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 latest_rev=$(git ls-remote https://github.com/kewuaa/kwm refs/heads/master | cut -f1)
 hash=$(nix-prefetch-git --url https://github.com/kewuaa/kwm --rev "$latest_rev" | jq -r '.hash')
 
-sed -i "s|rev = \"[^\"]*\"|rev = \"$latest_rev\"|" "$SCRIPT_DIR/package.nix"
-sed -i "s|hash = \"[^\"]*\"|hash = \"$hash\"|" "$SCRIPT_DIR/package.nix"
+source "$SCRIPT_DIR/../update-lib.sh"
+update_src "$SCRIPT_DIR/package.nix" "$latest_rev" "$hash"
 
 curl -fsSL "https://raw.githubusercontent.com/kewuaa/kwm/${latest_rev}/build.zig.zon" -o "$SCRIPT_DIR/build.zig.zon"
 zon2nix "$SCRIPT_DIR/build.zig.zon" > "$SCRIPT_DIR/build.zig.zon.nix"

@@ -14,6 +14,7 @@
   cmake,
   wayland-protocols,
   ninja,
+  spdlog,
 }:
 
 let
@@ -33,8 +34,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "g4b";
     repo = "mousetrap";
-    rev = "722d8f687839567636e4b56531ea4b0cef04f30c";
-    hash = "sha256-lNkntmsZNNiNetsMbBYoYRphYlAjbse7zhk1b8akr5E=";
+    rev = "5c7785fbb557d6888b0f2913eeb4b40028cb02aa";
+    hash = "sha256-DgebH3dpQhl5cyQkRKzRmtnhdGmFWxTLJRjyrdhsd/s=";
   };
 
   nativeBuildInputs = [
@@ -49,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
     cairo
     pango
+    spdlog
     tomlplusplus
     libxkbcommon
     wayland-protocols

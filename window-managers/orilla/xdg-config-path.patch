@@ -1,0 +1,28 @@
+--- a/crates/orilla-run/src/main.rs  2026-03-04 16:33:01.751246357 +0400
++++ b/crates/orilla-run/src/main.rs  2026-03-04 16:35:02.164956857 +0400
+@@ -39,13 +39,23 @@
+ 
+ fn usage(bin: &str) -> String {
+     format!(
+-        "{bin} [--config <path>]\n\nRuns orilla with a TOML config.\n\nOptions:\n  -c, --config <path>   Path to TOML config (default: config/default.toml)\n  -h, --help            Show this help"
++        "{bin} [--config <path>]\n\nRuns orilla with a TOML config.\n\nOptions:\n  -c, --config <path>   Path to TOML config (default: $XDG_CONFIG_HOME/orilla/config.toml)\n  -h, --help            Show this help"
+     )
+ }
+ 
++fn default_config_path() -> PathBuf {
++    if let Ok(xdg) = env::var("XDG_CONFIG_HOME") {
++        PathBuf::from(xdg).join("orilla").join("config.toml")
++    } else if let Ok(home) = env::var("HOME") {
++        PathBuf::from(home).join(".config").join("orilla").join("config.toml")
++    } else {
++        PathBuf::from("config/default.toml")
++    }
++}
++
+ fn parse_args() -> Result<(PathBuf, bool), String> {
+     let mut args = env::args().skip(1);
+-    let mut config_path = PathBuf::from("config/default.toml");
++    let mut config_path = default_config_path();
+     let mut explicit_config = false;
+ 
+     while let Some(arg) = args.next() {
